@@ -1,17 +1,28 @@
 package com.cg.iter;
 
-public class SummingLab4 {
+import java.util.Scanner;
 
-	public static int SummingLab4(int n) {
-		int z = (n * (n + 1) / 2);
+public class Summinglab4 {
 
-		return z * z;
+	public static int Summinglab4(int n) {
+		int sum=0,r;
+		
+		while(n>0)
+		{
+			r=n%10;
+			sum=(int) (sum+Math.pow(r, 3));
+			n=n/10;
+		}
+		return sum;
+	
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		int n = 4;
-		System.out.println(SummingLab4(n));
+		Scanner sc= new Scanner(System.in);
+		int n;
+		System.out.println("Enter a number");
+		n=sc.nextInt();
+		System.out.println(Summinglab4(n));
 	}
 
 }
